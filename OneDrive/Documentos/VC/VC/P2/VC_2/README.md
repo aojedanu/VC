@@ -54,17 +54,17 @@ Resalta visualmente la zona activa aplicando diferentes colores según el cuadra
 
 Azul para arriba-izquierda
 
-![Movimiento_Azul](./movimiento_Azul.png)
+![Movimiento_Azul](./Movimiento_Azul.png)
 
 Verde para arriba-derecha
 
-![Movimiento_Verde](./movimiento_Verde.png)
+![Movimiento_Verde](./Movimiento_Verde.png)
 
 Rojo para abajo-izquierda
 
-![Movimiento_Rojo](./movimiento_Rojo.png)
+![Movimiento_Rojo](./Movimiento_Rojo.png)
 
 Amarillo para abajo-derecha
 
-![Movimiento_Amarillo](./movimiento_Amarillo.png)
+![Movimiento_Amarillo](./Movimiento_Amarillo.png)
 

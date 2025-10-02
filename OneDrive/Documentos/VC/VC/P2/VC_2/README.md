@@ -25,11 +25,11 @@ Inicializa la cámara web y define cuatro modos de operación: normal, saturaci�
 Procesa cada fotograma aplicando diferentes efectos según el modo activo:
 
 Modo 1: Invierte el canal rojo con franjas horizontales del original
-
+![Modo1](./Modo1.png)
 Modo 2: Detecta y marca los píxeles más claro y oscuro de la imagen
-
+![Modo2](./Modo2.png)
 Modo 3: Crea un collage 4x4 con variaciones de tono y saturación
-
+![Modo3](./Modo3.png)
 Para cambiar entre los modos se imprimen instrucciones en pantalla sobre los controles (teclas M, N, B) para cambiar entre los diferentes modos de procesamiento.
 
 
@@ -42,11 +42,11 @@ Se calcula las diferencias de movimiento entre fotogramas consecutivos para cada
 Resalta visualmente la zona activa aplicando diferentes colores según el cuadrante ganador:
 
 Azul para arriba-izquierda
-![Movimiento Azul](./movimiento_azul.png)
+![Movimiento Azul](./movimiento Azul.png)
 Verde para arriba-derecha
-![Movimiento Verde](./movimiento_verde.png)
+![Movimiento Verde](./movimiento Verde.png)
 Rojo para abajo-izquierda
-![Movimiento Rojo](./movimiento_rojo.png)
+![Movimiento Rojo](./movimiento Rojo.png)
 Amarillo para abajo-derecha
 ![Movimiento Amarillo](./movimiento_amarillo.png)
 

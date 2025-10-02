@@ -2,32 +2,51 @@
 
 ### Contenidos
 
-[Aspectos cubiertos](#21-aspectos-cubiertos)  
-[Entrega](#22-entrega)  
+### Primer apartado
 
-### 2.1. Aspectos cubiertos
+En este ejercicio se analiza una imagen procesada con el detector de bordes Canny para identificar zonas con alta densidad de bordes horizontales:
+Calcula la densidad de píxeles blancos (bordes) por filas y columnas, normalizando los resultados entre 0 y 1
+Encuentra las filas con máxima densidad de bordes estableciendo un umbral del 90% del valor máximo
+Identifica las posiciones de las filas que superan este umbral y visualiza los resultados mostrando la imagen Canny original junto con un gráfico de la distribución de bordes por filas
+El objetivo principal es detectar automáticamente las filas donde se concentran la mayoría de los bordes horizontales en la imagen.
 
-La práctica precedente aborda el modo de acceder al valor asociado a un píxel, así como su modificación. Dicha capacidad abre muchísimas posibilidades, existiendo un nutrido grupo de operaciones básicas, habitualmente presentes en bibliotecas como la que utilizaremos a lo largo del curso: [OpenCV](https://opencv.org).
+### Segundo apartado 
 
-El cuaderno proporcionado para esta práctica (*VC_P2.ipynb*), recuerda en primer término la conversión de formato del espacio de color, tanto la conversión a grises, como a otros espacios de representación, que facilitan determinadas operaciones. Tras repasar el manejo de dichas utilidades, el cuaderno cubre un conjunto de funciones básicas de procesamiento de imágenes disponibles en OpenCV, como son las utilidades ya mencionadas de conversión de espacio de color, añadiendo las de cálculo de bordes o contornos, umbralizado, histogramas, diferencias de fotogramas o sustracción de fondo, etc., además de moestrar alternativas para escribir texto sobre la imagen. Para los ejemplos usando *PILimage* puede ser necesario instalar un nuevo paquete.
+En este apartado se realiza un análisis de distribución de intensidades en una imagen.
+El codigo calcula el histograma de la imagen en escala de grises para visualizar la distribución de tonos desde 0 (negro) hasta 255 (blanco) para analizar la densidad de píxeles blancos por filas y columnas en una imagen umbralizada, identificando las zonas con mayor concentración con estos datos 
+dibuja líneas rojas verticales y verdes horizontales en las posiciones que contienen al menos el 90% de la máxima densidad de píxeles para poder visualizar el resultado.
 
-```
-pip install Pillow
-```
+### Tercer apartado 
 
-### 2.2. Entrega
+Para realizar la tarea se ha decido implementa un procesador de video en tiempo real con múltiples efectos:
 
-A lo largo del cuaderno se propone resolver algunas variaciones sobre el código proporcionado. Además de dichas tareas concretas, en la parte final se proponen tareas con un objetivo más abierto otorgando mayor libertad en cuanto al resultado a producir:
+Inicializa la cámara web y define cuatro modos de operación: normal, saturación, detección de píxeles extremos, y collage pop-art con variaciones de color
 
-- Desarrollar un demostrador que capture las imágenes de la cámara, y les permita *exhibir* lo aprendido en estas dos primeras prácticas ante quienes no cursen la asignatura de Visión por Computador :) . Es por ello que además de poder mostrar la imagen original de la webcam, sea posible de forma interactiva cambiar de modo, incluyendo al menos dos modos diferentes que muestren el resultado de aplicar funciones de OpenCV trabajadas hasta ahora.
+Procesa cada fotograma aplicando diferentes efectos según el modo activo:
 
-- Por otro lado, plantear una reinterpretación de la parte de procesamiento de la imagen tomando como posible punto de partida alguna de las siguientes instalaciones:
+Modo 1: Invierte el canal rojo con franjas horizontales del original
 
-  - [My little piece of privacy](https://www.niklasroy.com/project/88/my-little-piece-of-privacy), por Niklas Roy   
-  - [Messa di voce](https://youtu.be/GfoqiyB1ndE?feature=shared), por Golan Levin y Zachary Lieberman
-  - [Virtual air guitar](https://youtu.be/FIAmyoEpV5c?feature=shared)
+Modo 2: Detecta y marca los píxeles más claro y oscuro de la imagen
 
-No olvidar todas las indicaciones dadas en la práctica anterior sobre la entrega: **enlace github** por medio del campus virtual incluyendo **cuaderno(s)** resolviendo las tareas y su correspondiente **README**.
+Modo 3: Crea un collage 4x4 con variaciones de tono y saturación
 
-***
-Bajo licencia de Creative Commons Reconocimiento - No Comercial 4.0 Internacional
+Para cambiar entre los modos se imprimen instrucciones en pantalla sobre los controles (teclas M, N, B) para cambiar entre los diferentes modos de procesamiento.
+
+
+### Cuarto Apartado
+
+En esta ultima tarea hemos tratado de implementar un rudimentario detector de movimiento por cuadrantes en tiempo real para ello se divide la imagen
+de la cámara en 4 cuadrantes iguales (arriba-izquierda, arriba-derecha, abajo-izquierda, abajo-derecha) usando operaciones de división horizontal y vertical. 
+Se calcula las diferencias de movimiento entre fotogramas consecutivos para cada cuadrante  para identifica la zona con mayor actividad. 
+
+Resalta visualmente la zona activa aplicando diferentes colores según el cuadrante ganador:
+
+Azul para arriba-izquierda
+![Movimiento Azul](./movimiento_azul.png)
+Verde para arriba-derecha
+![Movimiento Verde](./movimiento_verde.png)
+Rojo para abajo-izquierda
+![Movimiento Rojo](./movimiento_rojo.png)
+Amarillo para abajo-derecha
+![Movimiento Amarillo](./movimiento_amarillo.png)
+

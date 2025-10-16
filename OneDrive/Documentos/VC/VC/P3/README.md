@@ -45,9 +45,11 @@ Para la clasificación se ha empleado un Random Forest, que es entrenado con las
 Finalmente, comparando los valores predichos con los valores reales, se calculan las métricas de rendimiento más comunes (precisión, recall y F1-score), y se genera la matriz de confusión, para poder visualizar el desempeño del modelo de clasificación.
 
 Matriz de confusión:
+
 ![alt text](image.png)
 
 Predicciones:
+
 ![alt text](image-3.png)
 
 ### Conclusiones

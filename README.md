@@ -25,11 +25,11 @@ A lo largo de este proceso se intentan implementar mecanismos de optimización c
 reintentos controlados cada 5 frames si la lectura inicial no es confiable el filtrado de  lecturas mediante longitud mínima, probabilidad de confianza y lista de caracteres permitidos o  el descarte de 
 matrículas demasiado pequeñas o con baja confianza de detección. 
 
-![Reconocimiento de matricula co el texto traducido EasyOCR ](matriculaOCR.jpg)
+![Reconocimiento de matricula co el texto traducido EasyOCR ](mtriculaOCR.jpeg)
 
 
 
-![Reconocimiento de matricula co el texto traducido TesseractOCR ](matriculaTesseract.jpg)
+![Reconocimiento de matricula co el texto traducido TesseractOCR ](matriculaTesseract.jpeg)
 
 ### Salida Generada 
 
@@ -43,7 +43,7 @@ El código propuesto genera varias salidas:
 
 4) Estadísticas en consola con el conteo único de vehículos por categoría
 
-   ![Salida en formato csv ](/salida.jpg)
+   ![Salida en formato csv ](/salida.jpeg)
 
 ### Resultados obtenidos 
 

@@ -55,4 +55,6 @@ Como se puede observar por la salida obtenida el modelo es capaz de identificar 
 
 Se ha observado que  el reconocimiento de texto con Tesseract y EasyOCR tiene limitaciones a la hora de realizar la tarea de la traducción.
 La migración a modelos más pesados como SmallVM representaría una mejora significativa en la precisión general del sistema, particularmente en el reconocimiento de matrículas bajo condiciones desafiantes.
+Vídeos de salida:
+https://drive.google.com/drive/folders/1TYwcRL6MQN_g6kJ9JJnFzfuJeSXkgT67?usp=sharing
 

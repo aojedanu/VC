@@ -45,6 +45,12 @@ El código propuesto genera varias salidas:
 
    ![Salida en formato csv ](/salida.jpeg)
 
+5) Conteo por terminal de las distintas instancias de cada clase detectadas por el modelo.
+
+   ![Salida conteo ](/salida_conteo.jpeg)
+
+Como se puede observar por la salida obtenida el modelo es capaz de identificar muy adecuadamente los distintos elementos del video
+
 ### Resultados obtenidos 
 
 Se ha observado que  el reconocimiento de texto con Tesseract y EasyOCR tiene limitaciones a la hora de realizar la tarea de la traducción.

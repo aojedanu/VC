@@ -12,6 +12,10 @@ El primer modelo (yolo11n.pt) se encarga de la detección y seguimiento general 
 El segundo modelo, que hemos entrenado para detección de matriculas, se dedica exclusivamente a la detección de estas, y lo empleamos para detectarlas dentro de las bbox de coches, guaguas y motocicletas previamente detectadas por yolov11 preentrenado. 
 El texto de la matrícula es extraído usando Tesseract OCR o EasyOCR.
 
+### Enlace a los vídeos de output
+
+https://drive.google.com/drive/folders/1TYwcRL6MQN_g6kJ9JJnFzfuJeSXkgT67?usp=sharing
+
 ### Descripción del dataset
 
 Para el entrenamiento se ha empleado el siguiente dataset: https://www.kaggle.com/datasets/sujaymann/car-number-plate-dataset-yolo-format

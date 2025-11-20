@@ -3,7 +3,7 @@
 
 ## Objetivo 
 
-La meta de este proyecto es la creación de dos filtros mediante el uso de tecnologías de deteccion facial, para las implementaciones concretas se ha utilizado en primer lugar MTCCN (Multi-task Cascaded Convolutional Networks) para el desarrollo del primer filtro y un YOLO v8 entrenado cn el siguiente dataset (https://www.kaggle.com/datasets/fatihkgg/affectnet-yolo-format/data) para la implementacion del segundo.
+La meta de este proyecto es la creación de dos filtros mediante el uso de tecnologías de deteccion facial, para las implementaciones concretas se ha utilizado en primer lugar MTCCN (Multi-task Cascaded Convolutional Networks) para el desarrollo del primer filtro y, en el segundo filtro, un YOLOv8 preentrenado para detección de caras, y un segundo modelo YOLOv8 que hemos entrenado con el siguiente dataset (https://www.kaggle.com/datasets/fatihkgg/affectnet-yolo-format/data) para la detección de emociones.
 
 
 ### Primer Filtro
@@ -33,9 +33,11 @@ El segundo filtro se basa en un sistema de reconocimiento emocional capaz de rea
 
 El flujo de funcionamiento es el siguiente:
 
-EN primer lugar la webcam captura cada fotograma y el modelo YOLO de detección facial identifica las caras presentes, generando sus coordenadas. Para cada rostro encontrado se realiza un crop y se pasa al modelo YOLO de emociones, que predice la categoría emocional con mayor confianza entre las ocho posibles. En función de la emoción resultante, el sistema aplica un filtro visual distinto sobre la cara del usuario. Estos filtros incluyen superposición de imágenes PNG con canal alfa (como globos, regalos, vómito, puntos suspensivos…), efectos dibujados directamente (como la lluvia) o animaciones GIF convertidas frame a frame (como fuego o arañas).
-Las imágenes y GIFs se redimensionan dinámicamente en relación al tamaño de la cara detectada, garantizando una colocación coherente del filtro en cada expresión y para cualquier distancia a la cámara.
+En primer lugar la webcam captura cada fotograma y el modelo YOLO de detección facial identifica las caras presentes, generando sus coordenadas. Para cada rostro encontrado se realiza un crop y se pasa al modelo YOLO de emociones, que predice la categoría emocional con mayor confianza entre las ocho posibles. En función de la emoción resultante, el sistema aplica un filtro visual distinto sobre la cara del usuario. Estos filtros incluyen superposición de imágenes PNG con canal alfa (como globos, regalos, vómito, puntos suspensivos…), efectos dibujados directamente (como la lluvia) o animaciones GIF convertidas frame a frame (como fuego o arañas).
+Las imágenes y GIFs se colocan dinámicamente en relación a la bounding box de la cara detectada, garantizando una colocación coherente del filtro en cada expresión y para cualquier distancia a la cámara.
 Finalmente, cada elemento gráfico se integra en el fotograma.
+
+Además se ha añadido la opción de elegir dos modos: al tocar la tecla "c" se visualizará únicamente la cara detectada y la emoción, con su precisión, y al emplear la tecla "p" se verá dibujada la bounding box de la cara además del filtro.
 
 ### Resultados 
 

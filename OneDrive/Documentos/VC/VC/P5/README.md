@@ -39,10 +39,11 @@ Finalmente, cada elemento gráfico se integra en el fotograma.
 
 Además se ha añadido la opción de elegir dos modos: al tocar la tecla "c" se visualizará únicamente la cara detectada y la emoción, con su precisión, y al emplear la tecla "p" se verá dibujada la bounding box de la cara además del filtro.
 
-### Resultados 
+### Resultado Primer Filtro 
+
+![Animación](chaplin_gif.gif)
 
 
+### Resultados Segundo Filtro
 
-
-Este enfoque permite que el filtro responda de forma inmediata y visualmente llamativa al estado emocional del usuario, creando una experiencia interactiva y personalizada.
-### Resultados 
+![Animación](filtro_emociones.gif)
